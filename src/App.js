@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import MovieReview from './MovieContext';
 import './App.css';
+import List from './components/List';
+import Form from './components/Form';
+import Banner from './components/Banner';
+import React, {useState} from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('dark')
+const myTheme = () => {
+  setTheme(theme === 'dark' ? 'light' : 'dark');
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <div className={theme}>
+    
+  <div>
+  <button onClick={myTheme}>{theme === 'dark' ? 'light': 'dark'}</button>
+  <MovieReview>
+      
+      <Form />
+      <Banner/>
+   <List />
+    </MovieReview>
+  </div>
+ </div>
   );
 }
 
