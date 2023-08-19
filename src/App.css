@@ -49,3 +49,36 @@
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 600px){
+
+
+  .res{
+width:100%;
+padding: 0;
+display: flex;
+justify-content: center;
+flex-direction: column;
+  }
+  .res .resheading{
+    width: 100%;
+  }
+  .res .resheading h4{
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .res .form{
+    width:100%;
+
+  }
+  .res .form{
+   width: 100%;
+   /* padding: 20px; */
+   display: flex;
+   justify-content: center;
+  }
+
+  .banner{
+    width: 100%;
+  }
+}
